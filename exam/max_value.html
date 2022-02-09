@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="myform">
+		value-1<input type="text" name="no1"><br>
+		value-2<input type="text" name="no2"><br>
+		value-3<input type="text" name="no3"><br>
+		<input type="button" name="submit" value="open" onclick="valid()">
+		<input type="button" name="submit" value="close" onclick="wclose()">
+	</form>
+	<script type="text/javascript">
+		var win;
+		function valid(){
+		var x =document.myform.no1.value;
+		var y =document.myform.no2.value;
+		var z = document.myform.no3.value;
+		var max = 0;
+		if (max<x) {
+			max = x;
+		}
+		if (max<y) {
+			max = y;
+		}
+		if (max<z) {
+			max = z;
+		}
+		// document.write(max);
+
+	    win = window.open("", "", "height = 500,width=600");
+	    win.document.write(max);
+		}
+		function wclose(){
+			win.close();
+		}
+	</script>
+</body>
+</html>

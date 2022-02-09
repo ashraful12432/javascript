@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form action="" name="form">
+		<label>string</label><input type="text" name="strng"><br><br>
+		<label>search string</label><input type="text" name="s_strng"><br><br>
+		<input type="button" name="submit" value="chack" onclick="myform()">
+
+	</form>
+	<script type="text/javascript">
+		function myform(){
+			var str = document.form.strng.value;
+			var s_str =document.form.s_strng.value;
+
+			if (str.search(s_str)!=-1){
+				alert("string is found .index no is :"+str.search(s_str));
+			}
+			else {
+				alert("string not match")
+			}
+		}
+	</script>
+</body>
+</html>

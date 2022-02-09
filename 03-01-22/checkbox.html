@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="myform">
+        <input type="text" name="fname" placeholder="enter your first name"><br>
+        <input type="text" name="lname" placeholder="enter your lirst name"><br>
+        <input type="radio" name="gender" value="male"><label>male</label>
+        <input type="radio" name="gender" value="female"><label>female</label><br><br>
+        <input type="checkbox" name="mailId[]" value="pwad">pwad
+        <input type="checkbox" name="mailId[]" value="cse">cse
+        <input type="checkbox" name="mailId[]" value="cvil">cvil<br>
+        <button type="button" onclick="santo()">open</button>
+       
+    </form>
+    <script type="text/javascript">
+
+        var variable;
+
+        function santo() {
+            var store = "";
+            var cboxes = document.getElementsByName('mailId[]');
+            var len = cboxes.length;
+            for (var i = 0; i < len; i++) {
+                if (cboxes[i].checked) {
+                    store += cboxes[i].value+"<br>";
+                }
+            }
+
+             document.write(store);
+        }
+      
+    </script>
+</body>
+
+</html>

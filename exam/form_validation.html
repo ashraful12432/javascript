@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="show"></div>
+	<form name="myform">
+		name:<input type="text" name="fname"><br>
+		email:<input type="text" name="email"><br>
+		phone:<input type="text" name="number"><br>
+		<input type="button" name="submit" value="submit" onclick="fun()">
+
+	</form>
+	<script type="text/javascript">
+		function fun(){
+		var nam=document.myform.fname.value;
+		var eml=document.myform.email.value;
+		var numb=document.myform.number.value;
+		if (nam==null||nam==""){
+			alert("enter your name")
+			return false;
+		}
+		else if (eml==null||eml=="") {
+			alert("enter your email")
+			return false;
+			
+		}
+		else if (numb==null||numb=="") {
+			alert("enter your number")
+			return false;
+			
+		}
+		else{
+
+			var data= "your name is"+nam+"<br>";
+			 data+= "your name is"+eml+"<br>";
+			 data+= "your name is"+numb+"<br>";
+			 document.getElementById("show").innerHTML=data;}
+			
+				}
+
+	</script>
+</body>
+</html>

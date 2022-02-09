@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>form vali into new wiendows</h1>
+	<form action="" name="myform">
+		<input type="text" name="fname" placeholder="Enter your first name"><br>
+		<input type="text" name="lname" placeholder="Enter your last name"><br>
+		<input type="radio" name="gendar" value="male"><label>male</label><br>
+		<input type="radio" name="gendar" value="female"><label>female</label><br>
+		<button type="button" onclick="display()">Open</button>
+		<button type="button" onclick="windoclose()">Close</button>
+		
+	</form>
+	
+	<script type="text/javascript">
+ 
+		var mywindow;
+
+		function display(){
+			var first = document.myform.fname.value;
+			var last = document.myform.lname.value;
+			var sex = document.myform.gendar.value;
+
+			mywindow = window.open("", "","height=400,width=300,top=300,left=500,");
+			mywindow.document.write("<h1>the first name is "+first+"</h1>");
+			mywindow.document.write("<h1>the last name is "+last+"</h1>");
+			mywindow.document.write("<h1>the last name is "+sex+"</h1>");
+		}
+		function windoclose(){
+			mywindow.close();
+		}
+	</script>
+</body>
+</html>

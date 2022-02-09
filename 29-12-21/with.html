@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>with statement</h1>
+	<div id="show"></div>
+	<form action="" name="myfrom">
+		<input type="text" name="fullname" placeholder="enter your name"><br><br>
+		<textarea name="address" cols="30" rows="10" placeholder="address"></textarea><br><br>
+		gender:<br>
+		male<input type="radio" name="gender" value="male">
+		female<input type="radio" name="gender" value="female"><br><br>
+		dristict:<br>
+		<select name="district">
+			<option>select one</option>
+			<option>dhaka</option>
+			<option>borisal</option>
+			<option>khulna</option>
+			<option>rongpur</option>		
+		</select><br><br>
+		<input type="button" name="button" value="send" onclick="getData()">
+	</form>
+	<script type="text/javascript">
+		function getData()
+		{
+			with (document.myfrom){
+				var full = fullname.value
+				var gen = gender.value
+				var dis = district.value
+				var add = address.value
+			}
+			var  data="";
+			data +="name:"+ full +"<br>"
+			data +="gender:"+ gen +"<br>"
+			data +="district:"+ dis +"<br>"
+			data +="address:"+ add +"<br>"
+			document.getElementById("show").innerHTML =data;
+
+		}
+	</script>
+</body>
+</html>

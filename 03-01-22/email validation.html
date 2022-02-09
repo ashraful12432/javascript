@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<input type="text" placeholder="enter your name" name="email" value="email"><br>
+		<input type="text" placeholder="enter your password" name="password" value="password"><br>
+		<input type="submit" name="sunmit" value="Chack" onclick="valid()" >
+
+		<script type="text/javascript">
+			function valid(){
+				var mail = document.form.email.value;
+				var pass = document.form.password.value;
+
+			var echeck = /\S+@\S+\.\S+$/;
+	        var pwcheck = /[A-z0-9]{6,}$/;
+	       	    if(echeck.test(mail)){
+		            alert("Enter Valid Email");
+		            return false;
+	        }
+	       		 if(!pwcheck.test(pass)){
+		            alert("Must be 6 or greater");
+		            return false;
+	        }
+
+        
+    }
+		
+		</script>
+	</form>
+</body>
+</html>

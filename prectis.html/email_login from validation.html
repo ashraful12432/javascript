@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="myform" onsubmit="return myfn()">
+		
+		Email <input type="text" name="email"  placeholder="enter your email"><br><br>
+		password <input type="password" name="password"  placeholder="enter your password"><br><br>
+		 <input type="submit" name="submit" value="log in"><br><br>
+	</form>
+	<script type="text/javascript">
+		function myfn(){
+			var e = document.myform.email.value;
+			var p = document.myform.password.value.length;
+			var ch=/[A-z0-9]+@[a-Z]+\.[A-z]{2,4}/;
+			var m = ch.test(e);
+			var condition = false;
+			if (m) {
+				condition = true;
+				
+			}
+			else {
+				alert("email address is invalie")
+				return false;
+			}
+			if (p<8) {
+				alert("Password must be 5 character")
+				return false;
+			}
+			else {
+				condition = true;
+			}
+			if (condition==true){
+				alert("all are validate");
+			}
+
+		}
+	</script>
+</body>
+</html>

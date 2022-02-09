@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var email = prompt("enter youe valid email","")
+		var chack =/\S+@\S+\.\S/
+		var sta = 0 ;
+		if (email.match(chack)) {
+			alert("the email addres are valid")
+				sta = 1;
+		}else{
+			alert("invalid email")
+			sta = 0;
+		}
+		var pass = prompt("enter your password","")
+		if (pass.length<8) {
+			alert("password must be 8 charecter")
+			sta = 0;
+		}else {
+			alert("invalid password")
+			str = 1;
+		}
+		if (sta==1) { 
+			alert("all are valid")
+		}
+
+
+	</script>
+</body>
+</html>

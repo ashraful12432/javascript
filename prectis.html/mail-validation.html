@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="mail">
+		
+		<label>Emale:</label><input type="email" name="email" placeholder="enter your name"><br><br>
+		<label>password:</label><input type="password" name="password" placeholder="enter your password"><br><br>
+		<button type="button" onclick="log()">log in</button>
+	</form>
+	<script type="text/javascript">
+		function log(){
+			var eml = document.mail.email.value;
+			var pass = document.mail.password.value.length;
+			var peattan = eml.search(/[a-Z0-9]+@[A-z]+\.[A-z]/);
+			var count = 0;
+			if (peattan ==-1){
+				alert("input valid email");
+				count++;
+				return false;
+
+			}
+			if (pass<=0){
+				alert("password must be mimimum 6 charecter");
+				count++;
+				return false;
+
+
+			}
+			if (count ==0){
+				alert("all data are valid");
+			}
+		
+		}
+	</script>
+	
+</body>
+</html>

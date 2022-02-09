@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="regiform">
+		<label>First name:<input type="text" name="fname" placeholder="enter your first name"></label><br><br>
+		<label>Last name:<input type="text" name="lname" placeholder="enter your last name"></label><br><br>
+		<label>Phone number:<input type="texy" name="call" placeholder="enter your phone number"></label><br><br>
+		<label>Email address:<input type="email" name="add" placeholder="enter your email address"></label><br><br>
+		<label>Password:<input type="texy" name="pass" placeholder="enter your password"></label><br><br>
+		<label>Textbox:</label><textarea name="text" cols="20" rows="5"></textarea><br><br>
+		<label>District</label>
+		<select name="dist">
+			<option value="tangail">tangail</option>
+			<option value="jamalpur">jamalpur</option>
+			<option value="sherpur">sherpur</option>
+			<option value="pabna">pabna</option>
+			<option value="rajshahi">rajshahi</option>
+		</select><br><br>
+		<label>gender:</label>
+		mail<input type="radio" name="gend" value="mail">
+		femail<input type="radio" name="gend" value="femail"><br><br>
+		<label>Cours:</label>
+		<input type="checkbox" name="chk[]" value="php" >php
+		<input type="checkbox" name="chk[]" value="java" >java
+		<input type="checkbox" name="chk[]" value="python" >python
+		<input type="checkbox" name="chk[]" value="c++" >c++<br><br>
+		<button type="button" onclick="display()">open</button>
+		<button type="button" onclick="dclose()">Close</button>
+</form>
+		<script type="text/javascript">
+			var mywindow;
+			function display(){
+				var f = document.regiform.fname.value;
+				var l = document.regiform.lname.value;
+				var p = document.regiform.call.value;
+				var ad = document.regiform.add.value;
+				var pa = document.regiform.pass.value; 
+				var t = document.regiform.text.value;
+				var dis = document.regiform.dist.value;
+				var gn = document.regiform.gend.value;
+
+				var valu ="";
+				var x = document.getElementsByName("chk[]");
+				var len = x.length;
+
+				for (var i=0; i<len; i++){
+					if (x[i].checked) {
+						valu += x[i].value+",";
+					}
+				}
+
+
+
+
+				mywindow = window.open("","","height=500,weight=450,lef=400,top=350");
+				mywindow.document.write("first name : "+f+"<br>");
+				mywindow.document.write("last name : "+l+"<br>");
+				mywindow.document.write("phone number : "+p+"<br>");
+				mywindow.document.write("email address : "+ad+"<br>");
+				mywindow.document.write("password : "+pa+"<br>");
+				mywindow.document.write("textbox : "+t+"<br>");
+				mywindow.document.write("dristict name : "+dis+"<br>");
+				mywindow.document.write("gender name : "+gn+"<br>");
+				mywindow.document.write("gender name : "+valu+"<br>");
+
+			}
+			function dclose(){
+				mywindow.close();
+
+			}
+		</script>
+</body>
+</html>

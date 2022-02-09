@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="log">
+		email:<input type="text" name="email"><br>
+		pasword:<input type="text" name="pass"><br>
+		<input type="button" name="submit" value="login" onclick="valid()">
+	</form>
+	<script type="text/javascript">
+		function valid(){
+			var em=document.log.email.value;
+			var p=document.log.pass.value.length;
+			var chack=em.search(/[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,4}/)
+			var status=false;
+			if (chack==-1) {
+				alert("the email is invalid");
+				return false;
+			}else{
+				status=true;
+			}
+			if (p<6) {
+				alert(" must be 6 charecter ");
+				return false;
+			}
+			else{
+				status = true;
+			}
+			if (status==true) {
+				alert("all are valide")
+			}
+		}
+	</script>
+	
+</body>
+</html>
